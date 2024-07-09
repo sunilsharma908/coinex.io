@@ -1,0 +1,195 @@
+.navbar {
+    height: 58px;
+    left: 0;
+    padding: 0 10px;
+    position: fixed !important;
+    right: 0;
+    top: 0;
+    z-index: 2000;
+    background-color: $primary-clr;
+    --bs-navbar-toggler-icon-bg: url('../Images/menu.svg');
+    .main-nav{
+        display: flex;
+        align-items: center;
+    }
+
+    .container-fluid {
+        --bs-gutter-x: 0rem !important;
+    }
+
+    .navbar-brand {
+        width: 122px;
+        img{
+            height: 34px;
+        }
+    }
+
+    .navbar-toggler {
+        border: none !important;
+        font-size: 1.25rem !important;
+    }
+
+    .navbar-toggler-icon {
+        position: relative;
+        opacity: 2;
+        background-color: $primary-clr;
+        border-radius: 7px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 30px;
+            left: 0;
+            border-radius: 50%;
+        }
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .nav-link {
+        color: $white !important;
+        font-weight: 500 !important;
+        position: relative;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .newbie {
+        position: relative;
+        margin: 0 10px;
+
+        &::before {
+            background-image: url(../Images/icon-menu.png);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
+            display: inline-block;
+            height: 38px;
+            inset-inline-start: -20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-23px);
+            width: 38px;
+        }
+
+        .newbie-text {
+            background: linear-gradient(180deg, #e8722b, #ff9758);
+            border: 2px solid #ffd68a;
+            border-radius: 20px;
+            color: #fff;
+            display: inline-block;
+            line-height: 22px;
+            padding: 0 16px;
+        }
+    }
+
+    .navbar-nav {
+        gap: 15px;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+
+        .login-button {
+            color: $white;
+            transition: color .4s;
+            font-size: 14px;
+
+            &:hover {
+                color: $green;
+            }
+        }
+
+        .nav-right-btn {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background-color: $light-green;
+            color: $white;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 1;
+            outline: none;
+            padding: 4px 24px;
+            min-height: 30px;
+            margin-inline-start: 30px !important;
+        }
+
+        .split {
+            background-color: $brown;
+            display: block;
+            height: 18px;
+            margin: 0 20px;
+            width: 1px;
+        }
+
+        svg {
+            color: $white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .s-icon{
+            margin-inline-start: 20px !important;
+        }
+    }
+}
+
+.offcanvas {
+    &.show {
+        background-color: $primary-clr;
+        color: $white;
+    }
+
+    .btn-close {
+        --bs-btn-close-bg: url('../Images/close.svg') !important;
+        --bs-btn-close-opacity: 1 !important;
+    }
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: $primary-clr;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-right {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .login-button,
+        .nav-right-btn {
+            margin-inline-start: 0 !important;
+            margin-bottom: 10px;
+        }
+
+        .split {
+            display: none;
+        }
+
+    }
+}
