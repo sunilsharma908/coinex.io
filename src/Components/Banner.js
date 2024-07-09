@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import Decor from '../Assets/Images/decor_night.png'
 
 const Banner = () => {
   return (
@@ -7,19 +8,23 @@ const Banner = () => {
       <Container className='custom-container'>
         <div className="c-home-banner">
           <Row>
-            <Col lg={7}>
-            <div className="banner-txt">
-              <h1>The Global Cryptocurrency Exchange</h1>
-              <p>Making Crypto Trading Easier</p>
-              <div className="register-banner">
-                <div className="banner-input">
-                  <input type="text" placeholder='Email Account' className='form-control'/>
+            <Col lg={8}>
+              <div className="banner-txt">
+                <h1>The Global Cryptocurrency Exchange</h1>
+                <p>Making Crypto Trading Easier</p>
+                <div className="register-banner">
+                  <div className="banner-input">
+                    <input type="text" placeholder='Email Account' className='form-control' />
+                  </div>
+                  <a href="#" className='reg-btn'><span>Register Now</span></a>
                 </div>
-                <a href="#" className='reg-btn'><span>Register Now</span></a>
               </div>
+            </Col>
+            <Col lg={4}>
+            <div className="banner-img">
+              <img src={Decor} alt="" />
             </div>
             </Col>
-            <Col lg={5}></Col>
           </Row>
         </div>
       </Container>

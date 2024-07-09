@@ -10,6 +10,7 @@
             padding-top: 60px;
 
             .banner-txt {
+                padding-top: 30px;
                 h1 {
                     line-height: 46px;
                     color: $white;
@@ -54,6 +55,7 @@
                             }
                             &:focus{
                                 border: 1px solid $light-green !important;
+                                box-shadow: unset !important;
                             }
                         }
                     }

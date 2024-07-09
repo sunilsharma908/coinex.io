@@ -1,0 +1,52 @@
+.market-list{
+    padding-top: 40px;
+    background-color: $primary-clr;
+    .market-item{
+        width: 230px;
+        cursor: pointer;
+        padding-inline-end: 20px !important;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-color: $input-border !important;
+        border-right: 1px solid;
+        .leading{
+            display: flex;
+            align-items: center;
+            .coin{
+                border-radius: 50%;
+                height: 25px;
+                overflow: hidden;
+                position: relative;
+                width: 25px;
+                img{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            span{
+                margin-inline-start: 8px !important;
+                color: $white;
+                font-weight: 600;
+            }
+            .percent-negative{
+                margin-inline-start: 18px !important;
+                color: $red;
+                font-size: 14px;
+            }
+        }
+        .sub-num{
+            span{
+                color: $white;
+                font-size: 20px;
+                margin-top: 6px;
+            }
+        }
+        .end-num{
+            span{
+                color: $brown;
+                font-size: 14px;
+            }
+            
+        }
+    }
+}
