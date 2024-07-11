@@ -1,0 +1,47 @@
+.mobile-app {
+    background-image: url(../Images//coinex.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 1280px 325px;
+    height: 674px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background-color: #0ead98;
+    @include flex-center;
+
+    .center-row {
+        @include flex-center;
+
+        .nav-pills {
+            gap: 16px;
+        }
+
+        .nav-link {
+            color: $nav-tabs;
+            background-color: unset !important;
+            font-size: 16px;
+
+            &.active {
+                position: relative;
+                color: $white;
+                font-size: 18px;
+                font-weight: 600;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 3px;
+                    background-color: $white;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    transition: 0.3s linear all;
+                }
+            }
+        }
+    }
+
+    .right-img {
+        @include flex-center;
+    }
+}

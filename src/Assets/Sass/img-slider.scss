@@ -2,6 +2,11 @@
     background-color: $primary-clr;
     padding-top: 25px;
     padding-bottom: 40px;
+    position: relative;
+
+    .swiper {
+        position: unset;
+    }
 
     .swiper-slide {
         img {
@@ -9,26 +14,113 @@
             height: 152px;
             border-radius: 10px;
         }
-        
+
     }
-    .swiper-pagination{
-        
+
+    .swiper-pagination {
+
         bottom: 0;
     }
-    .swiper-pagination-bullet{
+
+    .swiper-pagination-bullet {
         border-radius: 4px;
         height: 4px;
         width: 20px;
         background-color: $white;
     }
-    .swiper-pagination-bullet-active{
+
+    .swiper-pagination-bullet-active {
         background-color: $light-green;
     }
+
+    .swiper-button-prev {
+        &:hover {
+            &::after {
+                background: $white !important;
+            }
+        }
+
+        left: 230px;
+
+        &::after {
+
+            background: $next-prev;
+            color: $black;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 600;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+        }
+    }
+
+    .swiper-button-next {
+        right: 230px;
+
+        &:hover {
+            &::after {
+                background: $white !important;
+            }
+        }
+
+        &::after {
+            background: $next-prev;
+            color: $black;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 600;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+        }
+    }
 }
-.anouncement{
-    margin-top: 30px;
+
+.anouncement {
+    padding-top: 30px;
     background-color: $primary-clr;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .announce-txt {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        p {
+            color: $white;
+            font-size: 14px;
+        }
+
+        span {
+            color: $txt-clr;
+            font-size: 14px;
+        }
+    }
+
+    .more-link {
+        .more-link-1 {
+            color: $green;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: 15px;
+            }
+        }
+
+    }
 }

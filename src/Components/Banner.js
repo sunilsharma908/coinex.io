@@ -16,7 +16,7 @@ const Banner = () => {
                   <div className="banner-input">
                     <input type="text" placeholder='Email Account' className='form-control' />
                   </div>
-                  <a href="#" className='reg-btn'><span>Register Now</span></a>
+                  <button className='reg-btn'><span>Register Now</span></button>
                 </div>
               </div>
             </Col>

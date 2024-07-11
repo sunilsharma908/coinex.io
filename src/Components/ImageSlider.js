@@ -15,6 +15,9 @@ import Slide5 from '../Assets/Images/slide5.png';
 import Slide6 from '../Assets/Images/slide6.png';
 
 import { Col, Container, Row } from 'react-bootstrap';
+import VolumeUpIcon from '../Assets/Images/broadcast.svg';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Link } from 'react-router-dom';
 
 const ImageSlider = () => {
     return (
@@ -60,7 +63,24 @@ const ImageSlider = () => {
                 </Container>
             </div>
             <div className="anouncement">
-                
+                <Container>
+                    <Row>
+                        <Col lg={8}>
+                            <div className="announce-txt">
+                                <div className="announce-icon">
+                                    <img src={VolumeUpIcon} alt=''/>
+                                </div>
+                                <p>CoinEx Will Support NTRN (Neutron) Network Upgrade</p>
+                                <span>2024/07/09</span>
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                        <div className="more-link">
+                            <Link to="/" className='more-link-1'>More <KeyboardArrowRightIcon/></Link>
+                        </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </>
     );

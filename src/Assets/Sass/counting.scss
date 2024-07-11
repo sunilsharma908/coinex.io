@@ -1,0 +1,22 @@
+.counter{
+    padding: 60px 0;
+    background-color: $primary-clr;
+    .main-counter{
+        display: flex;
+        justify-content: space-between;
+        .coins{
+            @include flex-center;
+            flex-direction: column;
+            .num{
+                color: $white;
+                font-weight: 600;
+                font-size: 42px;
+            }
+            .text{
+                color: $txt-clr;
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+    }
+}

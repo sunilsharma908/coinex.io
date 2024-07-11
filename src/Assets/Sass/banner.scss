@@ -62,8 +62,8 @@
 
                     .reg-btn {
                         min-width: 160px;
-                        background: $light-green;
-                        border: 1px solid $light-green;
+                        background: $green;
+                        border: 1px solid $green;
                         border-radius: 4px;
                         color: $white;
                         font-size: 14px;
@@ -76,7 +76,11 @@
                         white-space: normal;
                         margin-inline-start: 15px !important;
                         border-radius: 30px;
-                        @include flex-center
+                        @include flex-center;
+                        &:hover{
+                            background-color: $light-green;
+                            border-color: $light-green;
+                        }
                     }
                 }
             }

@@ -5,11 +5,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from 'react-router-dom';
-import Logo from '../Assets/Images/logo-white.svg';
 import AppsIcon from '@mui/icons-material/Apps';
 import DownloadIcon from '@mui/icons-material/Download';
-import LightModeIcon from '@mui/icons-material/LightMode';
 import LanguageIcon from '@mui/icons-material/Language';
+import { siteLogo, siteName } from '../config/config';
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(null);
@@ -35,7 +34,7 @@ const Header = () => {
       <Container className="" fluid>
         <div className="main-nav">
           <Navbar.Brand href="#" className="">
-            <img src={Logo} alt="" />
+            <img src={siteLogo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Offcanvas
@@ -45,7 +44,7 @@ const Header = () => {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                <img src={Logo} alt="" style={{ height: '35px' }} />
+                <img src={siteLogo} alt="" style={{ height: '35px' }} />
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
@@ -83,16 +82,13 @@ const Header = () => {
           </Navbar.Offcanvas>
         </div>
         <div className="nav-right">
-          <a href="#" className="login-button d-none d-lg-block">
+          <button href="#" className="login-button d-none d-lg-block">
             Log in
-          </a>
+          </button>
           <button className="nav-right-btn">Sign Up</button>
           <span className="split"></span>
           <div className="d-icon">
             <DownloadIcon />
-          </div>
-          <div className="s-icon">
-            <LightModeIcon />
           </div>
           <span className="split"></span>
           <div className="l-icon">
