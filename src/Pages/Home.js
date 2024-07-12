@@ -5,6 +5,8 @@ import ImageSlider from '../Components/ImageSlider'
 import TableHome from '../Components/TableHome'
 import Counting from '../Components/Counting'
 import MobileDownload from '../Components/MobileDownload'
+import Info from '../Components/Info'
+import Services from '../Components/Services'
 
 const Home = () => {
     return (
@@ -15,6 +17,8 @@ const Home = () => {
             <TableHome/>
             <Counting/>
             <MobileDownload/>
+            <Info/>
+            <Services/>
         </>
     )
 }

@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 import AppsIcon from '@mui/icons-material/Apps';
 import DownloadIcon from '@mui/icons-material/Download';
 import LanguageIcon from '@mui/icons-material/Language';
-import { siteLogo, siteName } from '../config/config';
+import { siteLogo} from '../config/config';
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(null);

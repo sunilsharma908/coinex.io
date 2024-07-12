@@ -47,3 +47,14 @@ h1,h2,h3,h4,h5,h6,p{
         overflow-x: hidden !important;
     }
 }
+
+.nav-tabs{
+  --bs-nav-tabs-border-color: unset !important;
+  --bs-nav-tabs-border-width: 0 !important;
+  --bs-nav-tabs-link-active-bg: unset !important;
+  .nav-link{
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+  
+}

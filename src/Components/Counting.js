@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { useInView } from 'react-intersection-observer'
 import anime from 'animejs'
-import numeral from 'numeral'
 
 const formatNumber = (num) => {
   if (num >= 1e9) return (num / 1e9).toFixed(2) + 'B'

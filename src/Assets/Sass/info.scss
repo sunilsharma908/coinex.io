@@ -1,0 +1,284 @@
+.info-box {
+    background-color: $primary-clr;
+    padding: 90px 0;
+
+    .intro {
+        .leading-txt {
+            color: $white;
+            line-height: 1.25;
+            font-weight: 600;
+            font-size: 32px;
+        }
+
+        .bt-txt {
+            color: $txt-clr;
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+
+    .trade-box {
+        padding-top: 30px;
+
+        .box-inner {
+            background-image: url(../Images/trade_bg_night.png);
+            background-repeat: no-repeat;
+            background-size: 100% 225px;
+            height: 225px;
+            position: relative;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            justify-content: flex-end;
+            padding: 0 40px 40px 40px;
+
+            &::after {
+                background-image: url(../Images/trade_decor.png);
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                content: "";
+                display: block;
+                height: 169px;
+                inset-inline-end: 80px;
+                position: absolute;
+                top: 30px;
+                width: 200px;
+            }
+
+            .inner-txt {
+                max-width: 500px;
+
+
+            }
+        }
+
+        .box-inner-2 {
+            background: $l-black;
+            height: 225px;
+            position: relative;
+            width: 388px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding-inline-start: 20px !important;
+
+            &::after {
+                background-image: url(../Images/global_decor.png);
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                content: "";
+                display: block;
+                height: 181px;
+                inset-inline-end: 0;
+                position: absolute;
+                top: 30px;
+                width: 120px;
+            }
+
+            .inner-txt2 {
+                padding-top: 30px;
+                padding-inline-end: 60px;
+
+                .ss {
+                    max-width: 198px;
+                }
+            }
+        }
+
+        .mm {
+            color: $white;
+            line-height: 1.25;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .ss {
+            color: $txt-clr;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .sm {
+            color: $white;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 6px;
+        }
+
+        .box-inner3 {
+            background: linear-gradient(180deg, #067d6e 4.44%, #1bbea9);
+            min-height: 270px;
+            position: relative;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding-inline-start: 30px;
+            padding-top: 36px;
+
+            &::after {
+                background-image: url(../Images/asset_decor.png);
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 155px;
+                inset-inline-end: 10px;
+                position: absolute;
+                width: 182px;
+            }
+
+            .inner-txt3 {
+                max-width: 260px;
+            }
+        }
+
+        .box-inner4 {
+            background-color: $l-black;
+            min-height: 270px;
+            position: relative;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding-inline-start: 45px;
+            padding-top: 36px;
+
+            .inner-txt4 {
+                max-width: 360px;
+            }
+
+            &::after {
+                background-image: url(../Images/protect_decor.png);
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 220px;
+                inset-inline-end: 10px;
+                position: absolute;
+                top: 30px;
+                width: 254px;
+            }
+        }
+    }
+
+    .guide {
+        padding-top: 60px;
+
+        .mm {
+            font-weight: 700;
+            font-size: 32px;
+            color: $white;
+        }
+
+        .ss {
+            font-size: 14px;
+            color: $txt-clr;
+            font-weight: 400;
+        }
+    }
+
+    .tab-btn {
+        padding-top: 20px;
+
+        .nav-link {
+            color: $txt-clr;
+            background-color: $bg-input;
+            height: 36px;
+            font-size: 14px;
+            line-height: 36px;
+            padding: 0px 36px;
+            margin-inline-end: 12px;
+            border: 1px solid $bg-input;
+
+            &:hover {
+                background-color: unset !important;
+                color: $green;
+                border: 1px solid $green;
+            }
+
+            &.active {
+                background-color: unset !important;
+                color: $green;
+                border: 1px solid $green;
+            }
+        }
+
+        .tab-cards {
+            margin-top: 40px;
+
+            img {
+                cursor: pointer;
+                position: relative;
+
+                &:hover {
+                    top: -5px;
+                }
+            }
+
+            p {
+                margin-top: 20px;
+                color: $white;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .panel-blog {
+        margin-top: 60px;
+
+        h5 {
+            font-weight: 700;
+            color: $white;
+            font-size: 32px;
+        }
+
+        .flex {
+            display: flex;
+            margin-bottom: 36px;
+            justify-content: space-between;
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                color: $txt-clr;
+                margin-top: 2px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 2px;
+                color: $green;
+            }
+        }
+
+        .blog-item {
+            background-color: $l-black;
+            cursor: pointer;
+            min-height: 414px;
+            padding: 20px;
+            border-radius: 20px;
+            img{
+                width: 100%;
+            }
+            .mm{
+                margin: 14px 0;
+                color: $white;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .ss{
+                color: $txt-clr;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+}

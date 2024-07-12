@@ -2,18 +2,22 @@
     background-image: url(../Images//coinex.png);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 1280px 325px;
     height: 674px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     background-color: #0ead98;
     @include flex-center;
 
+    .fade {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
     .center-row {
         @include flex-center;
 
         .nav-pills {
-            gap: 16px;
+            gap: 10px;
         }
 
         .nav-link {
@@ -43,5 +47,77 @@
 
     .right-img {
         @include flex-center;
+    }
+
+    .upper-content {
+        h5 {
+            color: $white;
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            color: $white;
+        }
+
+    }
+
+    .tab-content {
+        padding-top: 36px;
+        height: 170px;
+        max-width: 530px;
+        padding-bottom: 10px;
+
+        .tab-pane {
+            font-size: 20px;
+            color: $white;
+            font-weight: 400;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+    }
+
+    .flex-icons {
+        color: $white;
+        display: flex;
+        justify-content: flex-start;
+        gap: 40px;
+        
+
+        .ic {
+            @include flex-center;
+            flex-direction: column;
+            gap: 2px;
+            svg{
+                font-size: 40px;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+
+    }
+    .qrcode{
+        padding-top: 35px;
+        display: flex;
+        align-items: center;
+        .txt{
+            margin-inline-start: 20px !important;
+            p{
+                color: $white;
+                font-weight: 500;
+                font-size: 14px;
+            }
+        }
+        .box{
+            img{
+                height: 88px;
+                width: 88px;
+            }
+        }
     }
 }

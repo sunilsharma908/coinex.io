@@ -1,18 +1,42 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import Tab from 'react-bootstrap/Tab';
 import Nav from 'react-bootstrap/Nav';
-import Phone1 from '../Assets/Images/phone1.webp'
-import Phone2 from '../Assets/Images/phone2.webp'
-import Phone3 from '../Assets/Images/phone3.webp'
+import Phone1 from '../Assets/Images/phone1.webp';
+import Phone2 from '../Assets/Images/phone2.webp';
+import Phone3 from '../Assets/Images/phone3.webp';
+
+import AppleIcon from '@mui/icons-material/Apple';
+import ShopIcon from '@mui/icons-material/Shop';
+import AndroidIcon from '@mui/icons-material/Android';
+import QR from '../Assets/Images/qr.png';
 
 const MobileDownload = () => {
+    const [activeKey, setActiveKey] = useState('first');
+    const [fade, setFade] = useState(false);
+
+    useEffect(() => {
+        const keys = ['first', 'second', 'third'];
+        let currentIndex = 0;
+
+        const interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % keys.length;
+            setFade(true);
+            setTimeout(() => {
+                setActiveKey(keys[currentIndex]);
+                setFade(false);
+            }, 500);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className='mobile-app'>
             <Container>
                 <Row>
                     <Col>
-                        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                        <Tab.Container id="left-tabs-example" activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
                             <Row className='center-row'>
                                 <Col sm={2}>
                                     <Nav variant="pills" className="flex-column">
@@ -27,26 +51,59 @@ const MobileDownload = () => {
                                         </Nav.Item>
                                     </Nav>
                                 </Col>
-                                <Col sm={4}>
+                                <Col sm={5}>
+                                    <div className="upper-content">
+                                        <h5>Compatible With Multiple Devices</h5>
+                                        <p>Trade Crypto, Anytime, Anywhere</p>
+                                    </div>
                                     <Tab.Content>
-                                        <Tab.Pane eventKey="first">First tab content</Tab.Pane>
-                                        <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
-                                        <Tab.Pane eventKey="third">THird tab content</Tab.Pane>
+                                        <Tab.Pane eventKey="first" className={fade ? 'fade' : ''}>
+                                            Diverse asset collection with comprehensive coin information
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="second" className={fade ? 'fade' : ''}>
+                                            Self-developed proprietary trade-matching engine, supporting up to 10,000 TPS
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="third" className={fade ? 'fade' : ''}>
+                                            PNL analysis at a glance, safely and conveniently deposit and withdraw assets
+                                        </Tab.Pane>
                                     </Tab.Content>
+                                    <div className="flex-icons">
+                                        <div className="ic">
+                                            <AppleIcon />
+                                            <p>APP Store</p>
+                                        </div>
+                                        <div className="ic">
+                                            <ShopIcon />
+                                            <p>Google Play</p>
+                                        </div>
+                                        <div className="ic">
+                                            <AndroidIcon />
+                                            <p>Android APK</p>
+                                        </div>
+                                    </div>
+                                    <div className="qrcode">
+                                        <div className="box">
+                                            <img src={QR} alt="" />
+                                        </div>
+                                        <div className="txt">
+                                            <p>Scan to Download CoinEx App</p>
+                                            <p>iOS & Android</p>
+                                        </div>
+                                    </div>
                                 </Col>
-                                <Col sm={6}>
+                                <Col sm={5}>
                                     <Tab.Content className='right-img'>
-                                        <Tab.Pane eventKey="first">
+                                        <Tab.Pane eventKey="first" className={fade ? 'fade' : ''}>
                                             <div className="phoneig">
                                                 <img src={Phone1} alt="" />
                                             </div>
                                         </Tab.Pane>
-                                        <Tab.Pane eventKey="second">
+                                        <Tab.Pane eventKey="second" className={fade ? 'fade' : ''}>
                                             <div className="phoneig">
                                                 <img src={Phone2} alt="" />
                                             </div>
                                         </Tab.Pane>
-                                        <Tab.Pane eventKey="third">
+                                        <Tab.Pane eventKey="third" className={fade ? 'fade' : ''}>
                                             <div className="phoneig">
                                                 <img src={Phone3} alt="" />
                                             </div>
@@ -59,7 +116,7 @@ const MobileDownload = () => {
                 </Row>
             </Container>
         </div>
-    )
-}
+    );
+};
 
-export default MobileDownload
+export default MobileDownload;
