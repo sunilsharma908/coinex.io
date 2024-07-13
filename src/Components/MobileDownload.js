@@ -10,6 +10,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import ShopIcon from '@mui/icons-material/Shop';
 import AndroidIcon from '@mui/icons-material/Android';
 import QR from '../Assets/Images/qr.png';
+import {siteName} from '../config/config'
 
 const MobileDownload = () => {
     const [activeKey, setActiveKey] = useState('first');
@@ -86,7 +87,7 @@ const MobileDownload = () => {
                                             <img src={QR} alt="" />
                                         </div>
                                         <div className="txt">
-                                            <p>Scan to Download CoinEx App</p>
+                                            <p>Scan to Download {siteName} App</p>
                                             <p>iOS & Android</p>
                                         </div>
                                     </div>

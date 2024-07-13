@@ -18,6 +18,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import VolumeUpIcon from '../Assets/Images/broadcast.svg';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Link } from 'react-router-dom';
+import {siteName} from '../config/config'
 
 const ImageSlider = () => {
     return (
@@ -30,10 +31,32 @@ const ImageSlider = () => {
                                 modules={[Navigation, Pagination, Autoplay]}
                                 spaceBetween={40}
                                 slidesPerView={3}
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                    },
+                                    768: {
+                                        slidesPerView: 1,
+                                    },
+                                    992: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 40,
+                                    },
+                                    1200: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 30,
+                                    },
+                                    1400: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 30,
+                                    },
+
+                                }}
+                                loop={true}
                                 navigation
                                 pagination={{ clickable: true }}
                                 autoplay={{
-                                    delay: 1000,
+                                    delay: 1200,
                                     disableOnInteraction: false
                                 }}
                                 onSlideChange={() => console.log('slide change')}
@@ -70,7 +93,7 @@ const ImageSlider = () => {
                                 <div className="announce-icon">
                                     <img src={VolumeUpIcon} alt=''/>
                                 </div>
-                                <p>CoinEx Will Support NTRN (Neutron) Network Upgrade</p>
+                                <p>{siteName} Will Support NTRN (Neutron) Network Upgrade</p>
                                 <span>2024/07/09</span>
                             </div>
                         </Col>

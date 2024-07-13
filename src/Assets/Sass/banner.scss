@@ -11,6 +11,9 @@
 
             .banner-txt {
                 padding-top: 30px;
+                @media (max-width: 991px) {
+                    text-align: center;
+                }
                 h1 {
                     line-height: 46px;
                     color: $white;
@@ -27,6 +30,9 @@
                 .register-banner {
                     display: flex;
                     margin-top: 30px;
+                    @media (max-width: 991px) {
+                        justify-content: center;
+                    }
 
                     .banner-input {
                         width: 314px;
@@ -82,6 +88,11 @@
                             border-color: $light-green;
                         }
                     }
+                }
+            }
+            .banner-img{
+                @media (max-width: 991px) {
+                    display: none;
                 }
             }
         }

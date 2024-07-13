@@ -7,7 +7,7 @@ const MarketList = () => {
     <div className='market-list'>
       <Container>
         <Row>
-          <Col lg={3}>
+          <Col lg={3} xs={6}>
             <div className="market-item">
               <div className="leading">
                 <div className="coin">
@@ -24,7 +24,7 @@ const MarketList = () => {
               </div>
             </div>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} xs={6}>
             <div className="market-item">
               <div className="leading">
                 <div className="coin">
@@ -41,7 +41,7 @@ const MarketList = () => {
               </div>
             </div>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} xs={6}>
             <div className="market-item">
               <div className="leading">
                 <div className="coin">
@@ -58,7 +58,7 @@ const MarketList = () => {
               </div>
             </div>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} xs={6}>
             <div className="market-item">
               <div className="leading">
                 <div className="coin">

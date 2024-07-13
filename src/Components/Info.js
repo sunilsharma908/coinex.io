@@ -9,6 +9,7 @@ import Cover2 from '../Assets/Images/cover-2.png'
 import Cover3 from '../Assets/Images/cover-3.png'
 import { Link } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import {siteName} from '../config/config'
 
 const Info = () => {
 
@@ -20,7 +21,7 @@ const Info = () => {
         <Row>
           <Col lg={12}>
             <div className="intro">
-              <p className='leading-txt'>On CoinEx, Trade With Safety and Convenience</p>
+              <p className='leading-txt'>On {siteName}, Trade With Safety and Convenience</p>
               <p className='bt-txt'>Trusted by 5 million global users</p>
             </div>
           </Col>
@@ -49,7 +50,7 @@ const Info = () => {
               <div className="box-inner3">
                 <div className="inner-txt3">
                   <p className='mm'>Shield Fund</p>
-                  <p className='sm'>CoinEx provides an additional level of reassurance on top of our robust security infrastructure - Shield Fund, going above and beyond to safeguard your assets.</p>
+                  <p className='sm'>{siteName} provides an additional level of reassurance on top of our robust security infrastructure - Shield Fund, going above and beyond to safeguard your assets.</p>
                 </div>
               </div>
             </div>
@@ -85,15 +86,15 @@ const Info = () => {
                     <Row>
                       <Col lg={4}>
                         <img src={Card1} alt="" />
-                        <p>How to Deposit/Withdraw on CoinEx?</p>
+                        <p>How to Deposit/Withdraw on {siteName}?</p>
                       </Col>
                       <Col lg={4}>
                         <img src={Card3} alt="" />
-                        <p>CoinEx Spot Trading Guide</p>
+                        <p>{siteName} Spot Trading Guide</p>
                       </Col>
                       <Col lg={4}>
                         <img src={Card2} alt="" />
-                        <p>Earn with CoinEx Financial Account</p>
+                        <p>Earn with {siteName} Financial Account</p>
                       </Col>
                     </Row>
                   </div>
@@ -103,15 +104,15 @@ const Info = () => {
                     <Row>
                       <Col lg={4}>
                         <img src={Card1} alt="" />
-                        <p>How to Deposit/Withdraw on CoinEx?</p>
+                        <p>How to Deposit/Withdraw on {siteName}?</p>
                       </Col>
                       <Col lg={4}>
                         <img src={Card3} alt="" />
-                        <p>CoinEx Spot Trading Guide</p>
+                        <p>{siteName} Spot Trading Guide</p>
                       </Col>
                       <Col lg={4}>
                         <img src={Card2} alt="" />
-                        <p>Earn with CoinEx Financial Account</p>
+                        <p>Earn with {siteName} Financial Account</p>
                       </Col>
                     </Row>
                   </div>
@@ -131,21 +132,21 @@ const Info = () => {
                   <div className='blog-item'>
                     <img src={Cover1} alt="" />
                     <p className='mm'>Top 10 PolitiFi Projects In 2024 And How to Buy Their Tokens</p>
-                    <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on CoinEx.</p>
+                    <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on {siteName}.</p>
                   </div>
                 </Col>
                 <Col lg={4}>
                 <div className='blog-item'>
                     <img src={Cover2} alt="" />
                     <p className='mm'>Top 10 PolitiFi Projects In 2024 And How to Buy Their Tokens</p>
-                    <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on CoinEx.</p>
+                    <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on {siteName}.</p>
                   </div>
                 </Col>
                 <Col lg={4}>
                 <div className='blog-item'>
                     <img src={Cover3} alt="" />
                     <p className='mm'>Top 10 PolitiFi Projects In 2024 And How to Buy Their Tokens</p>
-                    <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on CoinEx.</p>
+                    <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on {siteName}.</p>
                   </div>
                 </Col>
               </Row>

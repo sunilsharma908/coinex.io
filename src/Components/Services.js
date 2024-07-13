@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import {siteName} from '../config/config'
 import Service1 from '../Assets/Images/ambassador.svg'
 import Service2 from '../Assets/Images/partner.svg'
 import Service3 from '../Assets/Images/marking.svg'
@@ -19,11 +20,11 @@ const Services = () => {
                         <div className="service-items">
                             <div className='service-1'>
                                 <img src={Service1} alt="" />
-                                <span>CoinEx Ambassador</span>
+                                <span>{siteName} Ambassador</span>
                             </div>
                             <div className='service-1'>
                                 <img src={Service2} alt="" />
-                                <span>CoinEx Partner</span>
+                                <span>{siteName} Partner</span>
                             </div>
                         </div>
                     </Col>
@@ -49,7 +50,7 @@ const Services = () => {
                     <Col lg={12}>
                         <div className="trip trip-panel">
                             <div className="flex-col">
-                                <p>Explore the Crypto World with CoinEx</p>
+                                <p>Explore the Crypto World with {siteName}</p>
                                 <button>
                                     <span>Register Now</span>
                                 </button>

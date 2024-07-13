@@ -8,7 +8,7 @@ const Banner = () => {
       <Container className='custom-container'>
         <div className="c-home-banner">
           <Row>
-            <Col lg={8}>
+            <Col lg={8} md={12}>
               <div className="banner-txt">
                 <h1>The Global Cryptocurrency Exchange</h1>
                 <p>Making Crypto Trading Easier</p>
