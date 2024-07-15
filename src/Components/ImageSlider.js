@@ -63,22 +63,22 @@ const ImageSlider = () => {
                                 onSwiper={(swiper) => console.log(swiper)}
                             >
                                 <SwiperSlide>
-                                    <img src={Slide1} alt="" />
+                                    <img src={Slide1} alt="" className='img-fluid'/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src={Slide2} alt="" />
+                                    <img src={Slide2} alt="" className='img-fluid'/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src={Slide3} alt="" />
+                                    <img src={Slide3} alt="" className='img-fluid'/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src={Slide4} alt="" />
+                                    <img src={Slide4} alt="" className='img-fluid'/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src={Slide5} alt="" />
+                                    <img src={Slide5} alt="" className='img-fluid'/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src={Slide6} alt="" />
+                                    <img src={Slide6} alt="" className='img-fluid'/>
                                 </SwiperSlide>
                             </Swiper>
                         </Col>
@@ -88,7 +88,7 @@ const ImageSlider = () => {
             <div className="anouncement">
                 <Container>
                     <Row>
-                        <Col lg={8}>
+                        <Col lg={8} md={10}>
                             <div className="announce-txt">
                                 <div className="announce-icon">
                                     <img src={VolumeUpIcon} alt=''/>
@@ -97,7 +97,7 @@ const ImageSlider = () => {
                                 <span>2024/07/09</span>
                             </div>
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} md={2}>
                         <div className="more-link">
                             <Link to="/" className='more-link-1'>More <KeyboardArrowRightIcon/></Link>
                         </div>

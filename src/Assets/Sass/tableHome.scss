@@ -2,6 +2,12 @@
     padding-top: 75px;
     background-color: $primary-clr;
 
+    .table-head {
+        @media (max-width: 575px) {
+            gap: 20px;
+        }
+    }
+
     .header-wrapper {
         .heading {
             color: $white;
@@ -50,15 +56,24 @@
         --bs-nav-tabs-border-width: 0 !important;
         --bs-nav-tabs-border-color: unset !important;
         --bs-nav-tabs-border-radius: 0 !important;
-        
+
+
+        @media (max-width: 991px) {
+            gap: 16px;
+        }
+
+        @media (max-width: 575px) {
+            justify-content: center;
+        }
+
 
         .nav-link {
             color: $txt-clr;
             background-color: $bg-input;
-            height: 36px;
             font-size: 14px;
             line-height: 36px;
-            padding: 0px 36px;
+            height: 50px;
+            width: 98px;
             margin-inline-end: 12px;
             border: 1px solid $bg-input;
 
@@ -70,50 +85,62 @@
         }
 
     }
-    .tab-content{
+
+    .tab-content {
         padding: 0 !important;
-        th{
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        th {
             background-color: transparent;
             border: 0 !important;
             font-size: 12px;
             color: $txt-clr;
         }
-        td{
+
+        td {
             background-color: transparent;
             border: 0 !important;
             cursor: pointer;
         }
-        .cell{
+
+        .cell {
             display: flex;
             gap: 8px;
             padding: 20px 12px;
             border-radius: 12px;
-            .first-col{
+
+            .first-col {
                 height: 24px;
                 width: 24px;
             }
-            .fw{
+
+            .fw {
                 color: $white;
                 font-weight: 500;
             }
-            .sw{
+
+            .sw {
                 color: $txt-clr;
                 font-size: 12px;
             }
-            .positive{
+
+            .positive {
                 color: $green;
                 font-weight: 500;
             }
-            .negative{
+
+            .negative {
                 color: $red;
                 font-weight: 500;
             }
         }
-        .body-row{
-            &:hover{
+
+        .body-row {
+            &:hover {
                 background-color: $bg-input;
             }
-            
+
         }
     }
 }

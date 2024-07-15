@@ -1,18 +1,33 @@
-.counter{
+.counter {
     padding: 60px 0;
     background-color: $primary-clr;
-    .main-counter{
+
+    .main-counter {
         display: flex;
         justify-content: space-between;
-        .coins{
+
+        @media (max-width: 1199px) {
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 767px) {
+            gap: 70px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+
+        .coins {
             @include flex-center;
             flex-direction: column;
-            .num{
+
+            .num {
                 color: $white;
                 font-weight: 600;
                 font-size: 42px;
             }
-            .text{
+
+            .text {
                 color: $txt-clr;
                 font-weight: 400;
                 font-size: 18px;

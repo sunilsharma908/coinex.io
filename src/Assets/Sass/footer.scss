@@ -4,6 +4,20 @@
     .footer-start {
         padding-top: 32px;
         padding-bottom: 40px;
+        @media (max-width: 767px) {
+            padding-bottom: 0px;
+        }
+
+        .seperate {
+            @media (max-width: 1199px) {
+                margin-bottom: 60px;
+                padding-inline-start: 40px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+                padding-inline-start: 18px;
+            }
+        }
 
         .widget-1 {
             height: 100%;
@@ -28,8 +42,14 @@
             .f-icons {
                 .social-box {
                     display: flex;
+                    flex-wrap: wrap;
                     gap: 12px;
                     margin-bottom: 14px;
+
+                    img {
+                        width: 24px; /* Ensure icons resize correctly on small screens */
+                        height: 24px;
+                    }
                 }
             }
 
@@ -52,6 +72,9 @@
 
         .f-links {
             border-inline-end: 1px solid $f-border;
+            @media (max-width: 1199px) {
+                border: unset;
+            }
 
             a {
                 color: $txt-clr;
@@ -71,6 +94,10 @@
             display: flex;
             justify-content: space-between;
             padding-right: 40px;
+            @media (max-width: 767px) {
+                flex-direction: column;
+                padding-right: 0;
+            }
         }
     }
 
@@ -83,17 +110,30 @@
             align-items: center;
             justify-content: space-between;
             padding: 14px 0;
-            .left{
+
+            .left {
                 font-size: 12px;
                 font-weight: 500;
             }
-            .right{
+
+            .right {
                 font-size: 12px;
                 font-weight: 500;
-                .label-text{
+
+                .label-text {
                     margin-inline-end: 8px;
                 }
             }
         }
+        .flex-bar {
+            @media (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+            @media (max-width: 365px) {
+                gap: 10px;
+                justify-content: center;
+            }
+        }
+        
     }
 }

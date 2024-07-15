@@ -9,7 +9,7 @@ import Cover2 from '../Assets/Images/cover-2.png'
 import Cover3 from '../Assets/Images/cover-3.png'
 import { Link } from 'react-router-dom';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import {siteName} from '../config/config'
+import { siteName } from '../config/config'
 
 const Info = () => {
 
@@ -20,13 +20,13 @@ const Info = () => {
       <Container>
         <Row>
           <Col lg={12}>
-            <div className="intro">
+            <div className="intro"  data-aos="fade-right">
               <p className='leading-txt'>On {siteName}, Trade With Safety and Convenience</p>
               <p className='bt-txt'>Trusted by 5 million global users</p>
             </div>
           </Col>
           <Col lg={8}>
-            <div className="trade-box">
+            <div className="trade-box" data-aos="fade-right">
               <div className="box-inner">
                 <div className="inner-txt">
                   <p className="mm">Trade crypto with ease</p>
@@ -36,7 +36,7 @@ const Info = () => {
             </div>
           </Col>
           <Col lg={4}>
-            <div className="trade-box">
+            <div className="trade-box" data-aos="fade-left">
               <div className="box-inner-2">
                 <div className='inner-txt2'>
                   <p className='mm'>Providing seamless and user-driven crypto services</p>
@@ -46,7 +46,7 @@ const Info = () => {
             </div>
           </Col>
           <Col lg={5}>
-            <div className="trade-box">
+            <div className="trade-box" data-aos="fade-right">
               <div className="box-inner3">
                 <div className="inner-txt3">
                   <p className='mm'>Shield Fund</p>
@@ -56,7 +56,7 @@ const Info = () => {
             </div>
           </Col>
           <Col lg={7}>
-            <div className="trade-box">
+            <div className="trade-box" data-aos="fade-left">
               <div className="box-inner4">
                 <div className="inner-txt4">
                   <p className='mm'>Empowering you with advanced financial options</p>
@@ -68,13 +68,13 @@ const Info = () => {
         </Row>
         <Row>
           <Col lg={12}>
-            <div className="guide">
+            <div className="guide" data-aos="fade-right">
               <p className='mm'>Newbie Guide</p>
               <p className="ss">Master the process of trading crypto</p>
             </div>
           </Col>
           <Col lg={12}>
-            <div className="tab-btn">
+            <div className="tab-btn" data-aos="zoom-in">
               <Tabs
                 id="controlled-tab-example"
                 activeKey={key}
@@ -85,16 +85,22 @@ const Info = () => {
                   <div className='tab-cards'>
                     <Row>
                       <Col lg={4}>
-                        <img src={Card1} alt="" />
-                        <p>How to Deposit/Withdraw on {siteName}?</p>
+                        <div className="center">
+                          <img src={Card1} alt="" className='img-fluid' />
+                          <p>How to Deposit/Withdraw on {siteName}?</p>
+                        </div>
                       </Col>
                       <Col lg={4}>
-                        <img src={Card3} alt="" />
-                        <p>{siteName} Spot Trading Guide</p>
+                        <div className="center">
+                          <img src={Card3} alt="" className='img-fluid' />
+                          <p>{siteName} Spot Trading Guide</p>
+                        </div>
                       </Col>
                       <Col lg={4}>
-                        <img src={Card2} alt="" />
-                        <p>Earn with {siteName} Financial Account</p>
+                        <div className="center">
+                          <img src={Card2} alt="" className='img-fluid' />
+                          <p>Earn with {siteName} Financial Account</p>
+                        </div>
                       </Col>
                     </Row>
                   </div>
@@ -103,16 +109,22 @@ const Info = () => {
                   <div className='tab-cards'>
                     <Row>
                       <Col lg={4}>
-                        <img src={Card1} alt="" />
-                        <p>How to Deposit/Withdraw on {siteName}?</p>
+                        <div className="center">
+                          <img src={Card1} alt="" className='img-fluid' />
+                          <p>How to Deposit/Withdraw on {siteName}?</p>
+                        </div>
                       </Col>
                       <Col lg={4}>
-                        <img src={Card3} alt="" />
-                        <p>{siteName} Spot Trading Guide</p>
+                        <div className="center">
+                          <img src={Card3} alt="" className='img-fluid' />
+                          <p>{siteName} Spot Trading Guide</p>
+                        </div>
                       </Col>
                       <Col lg={4}>
-                        <img src={Card2} alt="" />
-                        <p>Earn with {siteName} Financial Account</p>
+                        <div className="center">
+                          <img src={Card2} alt="" className='img-fluid' />
+                          <p>Earn with {siteName} Financial Account</p>
+                        </div>
                       </Col>
                     </Row>
                   </div>
@@ -121,7 +133,7 @@ const Info = () => {
             </div>
           </Col>
           <Col lg={12}>
-            <div className="panel-blog">
+            <div className="panel-blog" data-aos="fade-up">
               <h5>Blog</h5>
               <div className="flex">
                 <p>Stay updated with the latest market trend and industry insights</p>
@@ -130,21 +142,21 @@ const Info = () => {
               <Row>
                 <Col lg={4}>
                   <div className='blog-item'>
-                    <img src={Cover1} alt="" />
+                    <img src={Cover1} alt="" className='img-fluid'/>
                     <p className='mm'>Top 10 PolitiFi Projects In 2024 And How to Buy Their Tokens</p>
                     <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on {siteName}.</p>
                   </div>
                 </Col>
                 <Col lg={4}>
-                <div className='blog-item'>
-                    <img src={Cover2} alt="" />
+                  <div className='blog-item'>
+                    <img src={Cover2} alt="" className='img-fluid'/>
                     <p className='mm'>Top 10 PolitiFi Projects In 2024 And How to Buy Their Tokens</p>
                     <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on {siteName}.</p>
                   </div>
                 </Col>
                 <Col lg={4}>
-                <div className='blog-item'>
-                    <img src={Cover3} alt="" />
+                  <div className='blog-item'>
+                    <img src={Cover3} alt="" className='img-fluid'/>
                     <p className='mm'>Top 10 PolitiFi Projects In 2024 And How to Buy Their Tokens</p>
                     <p className='ss'>Explore the top 10 Politifi projects in 2024: key features, token distribution, and how to buy them on {siteName}.</p>
                   </div>

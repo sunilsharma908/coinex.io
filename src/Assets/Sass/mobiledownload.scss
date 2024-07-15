@@ -8,6 +8,15 @@
     background-color: #0ead98;
     @include flex-center;
 
+    @media (max-width:991px) {
+        height: 740px;
+        overflow: unset;
+        padding-bottom: 60px;
+    }
+    @media (max-width:767px) {
+        padding-bottom: 0px;
+    }
+
     .fade {
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
@@ -70,6 +79,11 @@
         height: 170px;
         max-width: 530px;
         padding-bottom: 10px;
+        @media (max-width:767px) {
+            padding-top: 20px;
+            height: 90px;
+            display: inline-block;
+        }
 
         .tab-pane {
             font-size: 20px;
@@ -85,39 +99,50 @@
         display: flex;
         justify-content: flex-start;
         gap: 40px;
-        
+
 
         .ic {
             @include flex-center;
             flex-direction: column;
             gap: 2px;
-            svg{
+
+            svg {
                 font-size: 40px;
             }
-            p{
+
+            p {
                 font-size: 14px;
                 font-weight: 600;
             }
         }
 
     }
-    .qrcode{
+
+    .qrcode {
         padding-top: 35px;
         display: flex;
         align-items: center;
-        .txt{
+
+        .txt {
             margin-inline-start: 20px !important;
-            p{
+
+            p {
                 color: $white;
                 font-weight: 500;
                 font-size: 14px;
             }
         }
-        .box{
-            img{
+
+        .box {
+            img {
                 height: 88px;
                 width: 88px;
             }
+        }
+    }
+    .d-small{
+        @media (max-width:767px) {
+            display: none;
         }
     }
 }

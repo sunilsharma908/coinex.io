@@ -18,16 +18,16 @@ const TableHome = () => {
   const [key, setKey] = useState('tab1');
 
   return (
-    <div className='table-home'>
+    <div className='table-home'  data-aos="zoom-out">
       <Container>
-        <Row>
-          <Col lg={9}>
+        <Row className='table-head'>
+          <Col lg={9} sm={9}>
             <div className="header-wrapper">
               <h4 className='heading'>Top Trends</h4>
               <span>Crypto Leaderboard: Keep up to date, track, and analyze </span>
             </div>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} sm={3}>
             <div className="table-input">
               <input type="text" className='form-control' placeholder='Search' />
             </div>
@@ -1480,7 +1480,7 @@ const TableHome = () => {
                 </tbody>
               </Table>
             </Tab>
-            <Tab eventKey="tab6" title="Market Cap">
+            <Tab eventKey="tab6" title="Market">
               <Table>
                 <thead>
                   <tr>

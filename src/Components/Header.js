@@ -8,8 +8,13 @@ import { NavLink } from 'react-router-dom';
 import AppsIcon from '@mui/icons-material/Apps';
 import DownloadIcon from '@mui/icons-material/Download';
 import LanguageIcon from '@mui/icons-material/Language';
-import { siteLogo } from '../config/config';
+import { siteLogo, siteName } from '../config/config';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import dropdownImage from '../Assets/Images/menu.png';
+import Wallet from '../Assets/Images/wallet.png';
+import Chain from '../Assets/Images/chain.png';
+import Charity from '../Assets/Images/charity.png';
+import C2c from '../Assets/Images/c2c.png'
 
 const Header = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -52,7 +57,12 @@ const Header = () => {
           <Navbar.Brand href="#" className="">
             <img src={siteLogo} alt="" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-auto" />
+          <div className="ms-auto nav-side">
+            <button className="login-nav d-lg-none d-block">Login</button>
+            <button className='sign-nav d-lg-none d-block'>Sign Up</button>
+            <Navbar.Toggle aria-controls="offcanvasNavbar" />
+          </div>
+          {/* <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-auto" /> */}
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
@@ -73,13 +83,76 @@ const Header = () => {
                   onClick={() => handleClick(0)}
                 >
                   <NavDropdown.Item to="/apps1" as={NavLink}>
-                    App 1
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={Wallet} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          {siteName} Wallet
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/apps2" as={NavLink}>
-                    App 2
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={Chain} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          {siteName} Block Explorer
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/apps3" as={NavLink}>
-                    App 3
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={Charity} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          {siteName} Wallet
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item to="/apps4" as={NavLink}>
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={Wallet} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          {siteName} Wallet
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                 </NavDropdown>
 
@@ -91,17 +164,40 @@ const Header = () => {
                   onClick={() => handleClick(1)}
                 >
                   <NavDropdown.Item to="/flat1" as={NavLink}>
-                    Flat 1
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/flat2" as={NavLink}>
-                    Flat 2
-                  </NavDropdown.Item>
-                  <NavDropdown.Item to="/flat3" as={NavLink}>
-                    Flat 3
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item to="/flat4" as={NavLink}>
-                    Flat 4
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                 </NavDropdown>
 
@@ -113,13 +209,58 @@ const Header = () => {
                   onClick={() => handleClick(2)}
                 >
                   <NavDropdown.Item to="/markets1" as={NavLink}>
-                    Markets 1
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/markets2" as={NavLink}>
-                    Markets 2
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/markets3" as={NavLink}>
-                    Markets 3
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                 </NavDropdown>
 
@@ -131,13 +272,58 @@ const Header = () => {
                   onClick={() => handleClick(3)}
                 >
                   <NavDropdown.Item to="/exchange1" as={NavLink}>
-                    Exchange 1
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/exchange2" as={NavLink}>
-                    Exchange 2
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/exchange3" as={NavLink}>
-                    Exchange 3
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                 </NavDropdown>
 
@@ -149,13 +335,58 @@ const Header = () => {
                   onClick={() => handleClick(4)}
                 >
                   <NavDropdown.Item to="/futures1" as={NavLink}>
-                    Futures 1
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/futures2" as={NavLink}>
-                    Futures 2
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/futures3" as={NavLink}>
-                    Futures 3
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                 </NavDropdown>
 
@@ -167,13 +398,58 @@ const Header = () => {
                   onClick={() => handleClick(5)}
                 >
                   <NavDropdown.Item to="/finance1" as={NavLink}>
-                    Finance 1
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/finance2" as={NavLink}>
-                    Finance 2
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/finance3" as={NavLink}>
-                    Finance 3
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                 </NavDropdown>
 
@@ -185,13 +461,58 @@ const Header = () => {
                   onClick={() => handleClick(6)}
                 >
                   <NavDropdown.Item to="/promotion1" as={NavLink}>
-                    Promotion 1
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/promotion2" as={NavLink}>
-                    Promotion 2
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/promotion3" as={NavLink}>
-                    Promotion 3
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                 </NavDropdown>
 
@@ -203,13 +524,58 @@ const Header = () => {
                   onClick={() => handleClick(7)}
                 >
                   <NavDropdown.Item to="/more1" as={NavLink}>
-                    More 1
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/more2" as={NavLink}>
-                    More 2
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Item to="/more3" as={NavLink}>
-                    More 3
+                    <div className="menu-list">
+                      <div className="img">
+                        <img src={C2c} alt="" className='img-fluid' />
+                      </div>
+                      <div className="name">
+                        <div className="title">
+                          P2P Trading
+                        </div>
+                        <div className="desc">
+                          Decentralized Multi-Cryptocurrency Wallet
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <ArrowRightIcon />
+                      </div>
+                    </div>
                   </NavDropdown.Item>
                 </NavDropdown>
 

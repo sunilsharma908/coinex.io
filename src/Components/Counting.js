@@ -42,7 +42,7 @@ const Counting = () => {
   }, [inView])
 
   return (
-    <div className='counter' ref={ref}>
+    <div className='counter' ref={ref}  data-aos="fade-up">
       <Container>
         <Row>
           <Col lg={12}>

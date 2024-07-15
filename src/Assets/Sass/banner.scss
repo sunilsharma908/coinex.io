@@ -8,6 +8,9 @@
 
         .c-home-banner {
             padding-top: 60px;
+            @media (max-width: 991px) {
+                padding-top: 30px;
+            }
 
             .banner-txt {
                 padding-top: 30px;
@@ -33,12 +36,20 @@
                     @media (max-width: 991px) {
                         justify-content: center;
                     }
+                    @media (max-width: 575px) {
+                        flex-direction: column;
+                        gap: 10px;
+                    }
 
                     .banner-input {
                         width: 314px;
                         position: relative;
-
                         display: inline-block;
+                        @media (max-width: 575px) {
+                            width: 100%;
+                        }
+
+                        
 
                         input {
                             background-color: transparent !important;
@@ -83,6 +94,11 @@
                         margin-inline-start: 15px !important;
                         border-radius: 30px;
                         @include flex-center;
+
+                        @media (max-width: 575px) {
+                            width: 100%;
+                            margin-inline-start: 0 !important;
+                        }
                         &:hover{
                             background-color: $light-green;
                             border-color: $light-green;

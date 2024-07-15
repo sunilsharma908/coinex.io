@@ -1,15 +1,15 @@
-import React from 'react'
-import { Container, Col, Row } from 'react-bootstrap'
+import React from 'react';
+import { Container, Col, Row } from 'react-bootstrap';
 import { siteLogo, siteName } from '../config/config';
-import Social1 from '../Assets/Images/icon-email-night.svg'
-import Social2 from '../Assets/Images/icon-telegram-night.svg'
-import Social3 from '../Assets/Images/icon-facebook-night.svg'
-import Social4 from '../Assets/Images/icon-twitter-night.svg'
-import Social5 from '../Assets/Images/icon-medium-night.svg'
-import Social6 from '../Assets/Images/icon-reddit-night.svg'
-import Social7 from '../Assets/Images/icon-instagram-night.svg'
-import Social8 from '../Assets/Images/icon-youtube-night.svg'
-import Social9 from '../Assets/Images/icon-discord-night.svg'
+import Social1 from '../Assets/Images/icon-email-night.svg';
+import Social2 from '../Assets/Images/icon-telegram-night.svg';
+import Social3 from '../Assets/Images/icon-facebook-night.svg';
+import Social4 from '../Assets/Images/icon-twitter-night.svg';
+import Social5 from '../Assets/Images/icon-medium-night.svg';
+import Social6 from '../Assets/Images/icon-reddit-night.svg';
+import Social7 from '../Assets/Images/icon-instagram-night.svg';
+import Social8 from '../Assets/Images/icon-youtube-night.svg';
+import Social9 from '../Assets/Images/icon-discord-night.svg';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
       <Container>
         <div className="footer-start">
           <Row>
-            <Col lg={4}>
+            <Col xl={4} lg={6} md={12} className='seperate'>
               <div className="widget-1">
                 <div className="logo-txt">
                   <img src={siteLogo} alt="" />
@@ -38,10 +38,9 @@ const Footer = () => {
                   </div>
                   <div className='claim'>© 2017-2024 {siteName}.com. All rights reserved.</div>
                 </div>
-
               </div>
             </Col>
-            <Col lg={2}>
+            <Col xl={2} lg={6} md={6} className='seperate'>
               <div className="widget-2">
                 <div className="f-head">
                   <span>About</span>
@@ -60,7 +59,24 @@ const Footer = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={4}>
+            <Col xl={2} lg={6} md={6} className='seperate'>
+              <div className="widget-5">
+                <div className="f-head">
+                  <span>Extras</span>
+                </div>
+                <div className="f-links">
+                <ul>
+                    <li><Link to="">Referral Reward</Link></li>
+                    <li><Link to="">Fees Standard</Link></li>
+                    <li><Link to="">Apply for Token Listing</Link></li>
+                    <li><Link to="">BI Download</Link></li>
+                    <li><Link to="">Proof of Reserve</Link></li>
+                    <li><Link to="">Historical Market Data</Link></li>
+                  </ul>
+                </div>
+              </div>
+            </Col>
+            <Col xl={2} lg={6} md={6} className='seperate'>
               <div className="widget-3">
                 <div className="f-head">
                   <span>Services</span>
@@ -77,18 +93,18 @@ const Footer = () => {
                     <li><Link to="">Blog</Link></li>
                     <li><Link to="">Insight</Link></li>
                   </ul>
-                  <ul>
+                  {/* <ul>
                     <li><Link to="">Referral Reward</Link></li>
                     <li><Link to="">Fees Standard</Link></li>
                     <li><Link to="">Apply for Token Listing</Link></li>
                     <li><Link to="">BI Download</Link></li>
                     <li><Link to="">Proof of Reserve</Link></li>
                     <li><Link to="">Historical Market Data</Link></li>
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             </Col>
-            <Col lg={2}>
+            <Col xl={2} lg={6} md={6} className='seperate'>
               <div className="widget-4">
                 <div className="f-head">
                   <span>Support</span>
@@ -107,7 +123,6 @@ const Footer = () => {
             </Col>
           </Row>
         </div>
-
       </Container>
       <div className="bottom">
         <Container>
@@ -125,10 +140,9 @@ const Footer = () => {
             </Col>
           </Row>
         </Container>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

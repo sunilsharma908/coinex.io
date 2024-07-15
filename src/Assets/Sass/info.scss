@@ -32,6 +32,12 @@
             overflow: hidden;
             justify-content: flex-end;
             padding: 0 40px 40px 40px;
+            @media (max-width:575px) {
+                height: 100%;
+                padding: 30px 20px;
+                background-image: none;
+                background-color: $l-black;
+            }
 
             &::after {
                 background-image: url(../Images/trade_decor.png);
@@ -44,11 +50,16 @@
                 position: absolute;
                 top: 30px;
                 width: 200px;
+                z-index: 1;
+
+                @media (max-width:767px) {
+                    display: none;
+                }
             }
 
             .inner-txt {
                 max-width: 500px;
-
+                z-index: 2;
 
             }
         }
@@ -64,6 +75,10 @@
             overflow: hidden;
             padding-inline-start: 20px !important;
 
+            @media (max-width: 1199px) {
+                width: 100%;
+            }
+
             &::after {
                 background-image: url(../Images/global_decor.png);
                 background-repeat: no-repeat;
@@ -75,6 +90,8 @@
                 position: absolute;
                 top: 30px;
                 width: 120px;
+                
+
             }
 
             .inner-txt2 {
@@ -83,7 +100,11 @@
 
                 .ss {
                     max-width: 198px;
+                    @media (max-width:991px) {
+                        max-width: 80%;
+                    }
                 }
+                
             }
         }
 
@@ -99,6 +120,7 @@
             font-weight: 400;
             font-size: 14px;
             margin-top: 5px;
+            z-index: 2;
         }
 
         .sm {
@@ -118,6 +140,10 @@
             overflow: hidden;
             padding-inline-start: 30px;
             padding-top: 36px;
+            @media (max-width:575px) {
+                    min-height: 100%;
+                    padding: 30px 20px;
+            }
 
             &::after {
                 background-image: url(../Images/asset_decor.png);
@@ -130,6 +156,9 @@
                 inset-inline-end: 10px;
                 position: absolute;
                 width: 182px;
+                @media (max-width:575px) {
+                    display: none;
+                }
             }
 
             .inner-txt3 {
@@ -147,6 +176,15 @@
             overflow: hidden;
             padding-inline-start: 45px;
             padding-top: 36px;
+            @media (max-width:767px) {
+                align-items: center;
+                justify-content: center;
+                padding-top: 0;
+            }
+            @media (max-width:575px) {
+                  min-height: 100%;
+                  padding: 30px 20px;  
+            }
 
             .inner-txt4 {
                 max-width: 360px;
@@ -164,6 +202,10 @@
                 position: absolute;
                 top: 30px;
                 width: 254px;
+                z-index: 1;
+                @media (max-width:767px) {
+                    display: none;
+                }
             }
         }
     }
@@ -186,6 +228,17 @@
 
     .tab-btn {
         padding-top: 20px;
+        .tab-head{
+            @media (max-width:991px) {
+                justify-content: center;
+            }
+        }
+        .center{
+            @media (max-width:991px) {
+                text-align: center;
+                padding-bottom: 30px;
+            }
+        }
 
         .nav-link {
             color: $txt-clr;
@@ -239,6 +292,7 @@
             display: flex;
             margin-bottom: 36px;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             p {
                 font-size: 14px;
@@ -261,16 +315,26 @@
             min-height: 414px;
             padding: 20px;
             border-radius: 20px;
-            img{
+            @media (max-width:991px) {
+                margin-bottom: 30px;
+            }
+            @media (max-width:575px) {
+                min-height: auto;
+                padding-bottom: 20px;
+            }
+
+            img {
                 width: 100%;
             }
-            .mm{
+
+            .mm {
                 margin: 14px 0;
                 color: $white;
                 font-size: 16px;
                 font-weight: 700;
             }
-            .ss{
+
+            .ss {
                 color: $txt-clr;
                 font-weight: 400;
                 font-size: 14px;

@@ -10,36 +10,38 @@ import AppleIcon from '@mui/icons-material/Apple';
 import ShopIcon from '@mui/icons-material/Shop';
 import AndroidIcon from '@mui/icons-material/Android';
 import QR from '../Assets/Images/qr.png';
-import {siteName} from '../config/config'
+import { siteName } from '../config/config';
 
 const MobileDownload = () => {
     const [activeKey, setActiveKey] = useState('first');
     const [fade, setFade] = useState(false);
 
     useEffect(() => {
-        const keys = ['first', 'second', 'third'];
-        let currentIndex = 0;
+        if (window.innerWidth > 1199) {
+            const keys = ['first', 'second', 'third'];
+            let currentIndex = 0;
 
-        const interval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % keys.length;
-            setFade(true);
-            setTimeout(() => {
-                setActiveKey(keys[currentIndex]);
-                setFade(false);
-            }, 500);
-        }, 2500);
+            const interval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % keys.length;
+                setFade(true);
+                setTimeout(() => {
+                    setActiveKey(keys[currentIndex]);
+                    setFade(false);
+                }, 500);
+            }, 2500);
 
-        return () => clearInterval(interval);
+            return () => clearInterval(interval);
+        }
     }, []);
 
     return (
-        <div className='mobile-app'>
+        <div className='mobile-app'  data-aos="fade-up">
             <Container>
                 <Row>
                     <Col>
                         <Tab.Container id="left-tabs-example" activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
                             <Row className='center-row'>
-                                <Col sm={2}>
+                                <Col lg={2} md={12}>
                                     <Nav variant="pills" className="flex-column">
                                         <Nav.Item>
                                             <Nav.Link eventKey="first">Market</Nav.Link>
@@ -52,7 +54,7 @@ const MobileDownload = () => {
                                         </Nav.Item>
                                     </Nav>
                                 </Col>
-                                <Col sm={5}>
+                                <Col lg={5}  md={6}>
                                     <div className="upper-content">
                                         <h5>Compatible With Multiple Devices</h5>
                                         <p>Trade Crypto, Anytime, Anywhere</p>
@@ -92,7 +94,7 @@ const MobileDownload = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col sm={5}>
+                                <Col lg={5}  md={6} className='d-small'>
                                     <Tab.Content className='right-img'>
                                         <Tab.Pane eventKey="first" className={fade ? 'fade' : ''}>
                                             <div className="phoneig">

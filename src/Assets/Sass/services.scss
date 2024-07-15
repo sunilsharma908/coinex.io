@@ -16,8 +16,10 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+        margin-bottom: 32px;
 
         .service-1 {
+            cursor: pointer;
             align-items: center;
             background-color: $dark;
             border-radius: 20px;
@@ -26,6 +28,17 @@
             align-items: center;
             gap: 20px;
             padding: 18px 38px;
+            transition: all .4s;
+
+            span {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            &:hover {
+                background-color: rgba(14, 173, 152, .05);
+                color: $green;
+            }
         }
     }
 
@@ -51,17 +64,20 @@
         justify-content: center;
         background-position: center;
         background-repeat: no-repeat;
-        .flex-col{
+
+        .flex-col {
             display: flex;
             flex-direction: column;
             gap: 20px;
             align-items: center;
-            p{
+
+            p {
                 font-size: 32px;
                 color: $white;
                 font-weight: 700;
             }
-            button{
+
+            button {
                 padding: 0 20px;
                 height: 48px;
                 font-size: 14px;
@@ -73,7 +89,8 @@
                 background-color: $green;
                 transition: all .3s;
                 border-radius: 30px;
-                &:hover{
+
+                &:hover {
                     background-color: $light-green;
                 }
             }

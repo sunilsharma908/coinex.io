@@ -13,8 +13,103 @@
         display: flex;
         align-items: center;
 
+        .nav-side {
+            display: flex;
+            align-items: center;
+
+            .login-nav {
+                color: $white;
+                transition: color 0.4s;
+                font-size: 14px;
+                background-color: transparent;
+                border: none;
+                margin-right: 10px;
+                @media (max-width:575px) {
+                    font-size: 12px;
+                }
+                &:hover {
+                    color: $green;
+                }
+            }
+
+            .sign-nav {
+                border: 1px solid transparent;
+                border-radius: 4px;
+                background-color: $green;
+                color: $white;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 1;
+                outline: none;
+                padding: 8px 20px;
+                min-height: 30px;
+                margin-left: 10px;
+                transition: color 0.4s;
+                @media (max-width:575px) {
+                    font-size: 10px;
+                    margin-left: 0;
+                    padding: 8px 15px;
+                }
+                &:hover{
+                    background-color: $light-green;
+                }
+            }
+        }
+
         @media (max-width: 991px) {
             width: 100%;
+        }
+
+        .dropdown-menu {
+            background: $dark-brown;
+            border-radius: 18px;
+
+            .dropdown-item {
+                background: $dark-brown;
+
+                &:hover {
+                    background: $dark-brown;
+                }
+            }
+        }
+
+        .menu-list {
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 12px 10px;
+            transition: all .3s;
+
+            &:hover {
+                background-color: $primary-clr;
+
+                .title {
+                    color: $green;
+                }
+            }
+
+            .img {
+                width: 36px;
+                margin-inline-end: 12px;
+                margin-inline-start: 16px;
+            }
+
+            .title {
+                color: $white;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            .desc {
+                color: $txt-clr;
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            svg {
+                color: $green;
+            }
         }
     }
 
@@ -220,7 +315,7 @@
         flex-grow: 0 !important;
     }
 
-    
+
 
 }
 
@@ -230,6 +325,7 @@
         left: -118px;
         margin-top: var(--bs-dropdown-spacer);
     }
+
     .dropdown-toggle::after {
         display: none !important;
     }

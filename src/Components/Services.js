@@ -8,7 +8,7 @@ import Service4 from '../Assets/Images/partner.svg'
 
 const Services = () => {
     return (
-        <div className='service'>
+        <div className='service' data-aos="fade-right">
             <Container>
                 <Row>
                     <Col lg={12}>
