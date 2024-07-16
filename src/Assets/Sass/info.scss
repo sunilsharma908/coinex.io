@@ -78,6 +78,10 @@
             @media (max-width: 1199px) {
                 width: 100%;
             }
+            @media (max-width: 575px) {
+                height: 100%;
+                padding: 30px 20px;
+            }
 
             &::after {
                 background-image: url(../Images/global_decor.png);
@@ -97,6 +101,9 @@
             .inner-txt2 {
                 padding-top: 30px;
                 padding-inline-end: 60px;
+                @media (max-width: 575px) {
+                    padding-top: 0;
+                }
 
                 .ss {
                     max-width: 198px;
