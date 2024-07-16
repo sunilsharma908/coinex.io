@@ -275,13 +275,14 @@
         z-index: 3000;
 
         .offcanvas-body {
-            .navbar-nav{
+            .navbar-nav {
                 gap: 8px;
             }
+
             .dropdown-toggle {
                 position: relative;
-                font-size: 18px; 
-            
+                font-size: 18px;
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -291,12 +292,12 @@
                     top: 22px;
                     transition: transform 0.3s ease;
                 }
-            
+
                 &.show::after {
                     transform: rotateZ(0deg);
                 }
             }
-            
+
 
             .dropdown-menu {
                 background-color: $dark-brown;
