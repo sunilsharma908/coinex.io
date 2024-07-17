@@ -18,9 +18,14 @@
         .leading{
             display: flex;
             align-items: center;
+            gap: 3px;
             @media (max-width: 991px) {
                 justify-content: center;
             }
+            @media (max-width: 370px) {
+                justify-content: flex-start;
+            }
+           
             .coin{
                 border-radius: 50%;
                 height: 25px;
@@ -30,17 +35,28 @@
                 img{
                     width: 25px;
                     height: 25px;
+                    @media (max-width: 575px) {
+                        display: none;
+                    }
                 }
             }
             span{
                 margin-inline-start: 8px !important;
                 color: $white;
                 font-weight: 600;
+                @media (max-width: 575px) {
+                    margin-inline-start: 0px !important;
+                    font-size: 14px;
+                }
             }
             .percent-negative{
                 margin-inline-start: 18px !important;
                 color: $red;
                 font-size: 14px;
+                @media (max-width: 575px) {
+                    font-size: 10px;
+                    margin-inline-start: 4px !important;
+                }
             }
         }
         .sub-num{
@@ -48,6 +64,9 @@
                 color: $white;
                 font-size: 20px;
                 margin-top: 6px;
+                @media (max-width: 575px) {
+                    font-size: 16px;
+                }
             }
         }
         .end-num{

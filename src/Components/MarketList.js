@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Bitcoin from '../Assets/Images/bitcoin.png'
+import CoinEx from '../Assets/Images/favicon.png'
+import Xcoin from '../Assets/Images/ximg.png'
 
 const MarketList = () => {
   return (
@@ -28,9 +30,9 @@ const MarketList = () => {
             <div className="market-item">
               <div className="leading">
                 <div className="coin">
-                  <img src={Bitcoin} alt="" />
+                  <img src={CoinEx} alt="" />
                 </div>
-                <span>BTC/USDT</span>
+                <span>CET/USDT</span>
                 <div className='percent-negative'>-0.19%</div>
               </div>
               <div className="sub-num">
@@ -45,7 +47,7 @@ const MarketList = () => {
             <div className="market-item">
               <div className="leading">
                 <div className="coin">
-                  <img src={Bitcoin} alt="" />
+                  <img src={Xcoin} alt="" />
                 </div>
                 <span>BTC/USDT</span>
                 <div className='percent-negative'>-0.19%</div>
