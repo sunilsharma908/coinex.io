@@ -13,16 +13,23 @@
         display: flex;
         align-items: center;
 
-        .nav-item{
-            .dropdown-toggle{
-                &::after{
+        .nav-item {
+            .dropdown-menu {
+                transition: all .3s ease;
+            }
+
+            .dropdown-toggle {
+                transition: all .3s ease;
+
+                &::after {
                     transform: rotateZ(0deg);
                     transition: all .3s ease;
                 }
             }
-            &.show{
-                .dropdown-toggle{
-                    &::after{
+
+            &.show {
+                .dropdown-toggle {
+                    &::after {
                         transform: rotateZ(-180deg);
                     }
                 }
@@ -311,9 +318,10 @@
                     transition: transform 0.4s ease;
                 }
 
-                &.show{
+                &.show {
                     transition: transform 0.4s ease;
                     color: $green;
+
                     &::after {
                         transform: rotateZ(0deg);
                         color: $green;
