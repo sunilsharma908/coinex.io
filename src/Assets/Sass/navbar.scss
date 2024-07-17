@@ -13,6 +13,22 @@
         display: flex;
         align-items: center;
 
+        .nav-item{
+            .dropdown-toggle{
+                &::after{
+                    transform: rotateZ(0deg);
+                    transition: all .3s ease;
+                }
+            }
+            &.show{
+                .dropdown-toggle{
+                    &::after{
+                        transform: rotateZ(-180deg);
+                    }
+                }
+            }
+        }
+
         .nav-side {
             display: flex;
             align-items: center;
@@ -49,9 +65,9 @@
                 transition: color 0.4s;
 
                 @media (max-width:575px) {
-                    font-size: 10px;
+                    font-size: 11px;
                     margin-left: 0;
-                    padding: 8px 15px;
+                    padding: 0px 10px;
                 }
 
                 &:hover {
@@ -281,7 +297,9 @@
 
             .dropdown-toggle {
                 position: relative;
-                font-size: 18px;
+                font-size: 17px;
+                font-weight: 500;
+                transition: transform 0.4s ease;
 
                 &::after {
                     content: '';
@@ -290,11 +308,16 @@
                     font-size: 20px;
                     transform: rotateZ(-90deg);
                     top: 22px;
-                    transition: transform 0.3s ease;
+                    transition: transform 0.4s ease;
                 }
 
-                &.show::after {
-                    transform: rotateZ(0deg);
+                &.show{
+                    transition: transform 0.4s ease;
+                    color: $green;
+                    &::after {
+                        transform: rotateZ(0deg);
+                        color: $green;
+                    }
                 }
             }
 

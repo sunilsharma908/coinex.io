@@ -62,7 +62,6 @@ const Header = () => {
             <button className='sign-nav d-lg-none d-block'>Sign Up</button>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
           </div>
-          {/* <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-auto" /> */}
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
