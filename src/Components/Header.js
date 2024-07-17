@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -54,7 +55,7 @@ const Header = () => {
     <Navbar expand="lg" className="navbar">
       <Container fluid>
         <div className="main-nav">
-          <Navbar.Brand href="#" className="">
+          <Navbar.Brand to="/" className="" as={Link}>
             <img src={siteLogo} alt="" />
           </Navbar.Brand>
           <div className="ms-auto nav-side">
@@ -591,13 +592,13 @@ const Header = () => {
         <div className="nav-right d-none d-lg-flex">
           {screenWidth < 1200 && (
             <NavDropdown title={dropdownToggle} id="nav-dropdown">
-              <NavDropdown.Item href="#login">Log in</NavDropdown.Item>
-              <NavDropdown.Item href="#signup">Sign Up</NavDropdown.Item>
+              <NavDropdown.Item to="/" as={Link}>Log in</NavDropdown.Item>
+              <NavDropdown.Item to="/" as={Link}>Sign Up</NavDropdown.Item>
             </NavDropdown>
           )}
           {screenWidth >= 1200 && (
             <>
-              <button href="#" className="login-button">
+              <button className="login-button">
                 Log in
               </button>
               <button className="nav-right-btn">Sign Up</button>
