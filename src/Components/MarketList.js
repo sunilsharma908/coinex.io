@@ -49,7 +49,7 @@ const MarketList = () => {
                 <div className="coin">
                   <img src={Xcoin} alt="" />
                 </div>
-                <span>BTC/USDT</span>
+                <span>XRP/USDT</span>
                 <div className='percent-negative'>-0.19%</div>
               </div>
               <div className="sub-num">
