@@ -20,13 +20,13 @@ const Info = () => {
       <Container>
         <Row>
           <Col lg={12}>
-            <div className="intro"  data-aos="fade-right">
+            <div className="intro" >
               <p className='leading-txt'>On {siteName}, Trade With Safety and Convenience</p>
               <p className='bt-txt'>Trusted by 5 million global users</p>
             </div>
           </Col>
           <Col lg={8}>
-            <div className="trade-box" data-aos="fade-right">
+            <div className="trade-box" >
               <div className="box-inner">
                 <div className="inner-txt">
                   <p className="mm">Trade crypto with ease</p>
@@ -36,7 +36,7 @@ const Info = () => {
             </div>
           </Col>
           <Col lg={4}>
-            <div className="trade-box" data-aos="fade-left">
+            <div className="trade-box">
               <div className="box-inner-2">
                 <div className='inner-txt2'>
                   <p className='mm'>Providing seamless and user-driven crypto services</p>
@@ -46,7 +46,7 @@ const Info = () => {
             </div>
           </Col>
           <Col lg={5}>
-            <div className="trade-box" data-aos="fade-right">
+            <div className="trade-box" >
               <div className="box-inner3">
                 <div className="inner-txt3">
                   <p className='mm'>Shield Fund</p>
@@ -56,7 +56,7 @@ const Info = () => {
             </div>
           </Col>
           <Col lg={7}>
-            <div className="trade-box" data-aos="fade-left">
+            <div className="trade-box">
               <div className="box-inner4">
                 <div className="inner-txt4">
                   <p className='mm'>Empowering you with advanced financial options</p>
@@ -68,13 +68,13 @@ const Info = () => {
         </Row>
         <Row>
           <Col lg={12}>
-            <div className="guide" data-aos="fade-right">
+            <div className="guide">
               <p className='mm'>Newbie Guide</p>
               <p className="ss">Master the process of trading crypto</p>
             </div>
           </Col>
           <Col lg={12}>
-            <div className="tab-btn" data-aos="zoom-in">
+            <div className="tab-btn" >
               <Tabs
                 id="controlled-tab-example"
                 activeKey={key}
@@ -133,7 +133,7 @@ const Info = () => {
             </div>
           </Col>
           <Col lg={12}>
-            <div className="panel-blog" data-aos="fade-up">
+            <div className="panel-blog" >
               <h5>Blog</h5>
               <div className="flex">
                 <p>Stay updated with the latest market trend and industry insights</p>

@@ -35,7 +35,7 @@ const MobileDownload = () => {
     }, []);
 
     return (
-        <div className='mobile-app'  data-aos="fade-up">
+        <div className='mobile-app' >
             <Container>
                 <Row>
                     <Col>

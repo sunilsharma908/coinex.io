@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="c-home-banner">
           <Row>
             <Col lg={8} md={12}>
-              <div className="banner-txt" data-aos="zoom-in">
+              <div className="banner-txt">
                 <h1>The Global Cryptocurrency Exchange</h1>
                 <p>Making Crypto Trading Easier</p>
                 <div className="register-banner">
@@ -21,7 +21,7 @@ const Banner = () => {
               </div>
             </Col>
             <Col lg={4}>
-              <div className="banner-img" data-aos="fade-left">
+              <div className="banner-img">
                 <img src={Decor} alt="" />
               </div>
             </Col>

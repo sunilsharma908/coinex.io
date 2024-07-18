@@ -6,8 +6,9 @@
 }
 body{
     font-family: "Roboto", sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     background-color: $primary-clr !important;
+    
 }
 
 a{

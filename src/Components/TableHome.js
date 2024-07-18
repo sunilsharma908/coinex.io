@@ -18,7 +18,7 @@ const TableHome = () => {
   const [key, setKey] = useState('tab1');
 
   return (
-    <div className='table-home'  data-aos="zoom-out">
+    <div className='table-home'>
       <Container>
         <Row className='table-head'>
           <Col lg={9} sm={9}>
