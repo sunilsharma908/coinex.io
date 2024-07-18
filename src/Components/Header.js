@@ -56,7 +56,7 @@ const Header = () => {
       <Container fluid>
         <div className="main-nav">
           <Navbar.Brand to="/" className="" as={Link}>
-            <img src={siteLogo} alt="" />
+            <img src={siteLogo} alt={siteName} />
           </Navbar.Brand>
           <div className="ms-auto nav-side">
             <button className="login-nav d-lg-none d-block">Login</button>
