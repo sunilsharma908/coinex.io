@@ -283,10 +283,26 @@
             width: 1px;
         }
 
+        .d-icon{
+            svg{
+                &:hover{
+                    color: $green;
+                }
+            }
+        }
+        .l-icon{
+            svg{
+                &:hover{
+                    color: $green;
+                }
+            }
+        }
+
         svg {
             color: $white;
             cursor: pointer;
             font-size: 20px;
+            transition: 0.3s color linear;
         }
     }
 }
